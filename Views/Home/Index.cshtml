@@ -1,0 +1,31 @@
+﻿@model RecommenderApp.Models.RecommendationViewModel
+
+<h1>Recommender</h1>
+
+<form method="post">
+    <label for="itemId">Enter Item ID:</label>
+    <input type="number" id="itemId" name="ItemId" value="@Model.ItemId" required />
+    <button type="submit">Get Recommendations</button>
+</form>
+
+@if (Model.CollaborativeRecommendations.Any() || Model.ContentRecommendations.Any())
+{
+    <hr />
+    <h2>Results for ID: @Model.ItemId</h2>
+
+    <h3>Collaborative Recommendations</h3>
+    <ul>
+        @foreach (var rec in Model.CollaborativeRecommendations)
+        {
+            <li>@rec</li>
+        }
+    </ul>
+
+    <h3>Content Filtering Recommendations</h3>
+    <ul>
+        @foreach (var rec in Model.ContentRecommendations)
+        {
+            <li>@rec</li>
+        }
+    </ul>
+}

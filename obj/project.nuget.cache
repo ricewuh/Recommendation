@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KvCVjRnwRK0=",
+  "success": true,
+  "projectFilePath": "/Users/1jose/RecommenderApp/RecommenderApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/1jose/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
